@@ -14,7 +14,8 @@ export default {
       async fetchData() {
         const token = await window.authService.acquireToken();
         console.log(token);
-        const response = await fetch('https://localhost:5001/Flag',{
+        const response = await fetch('https://kefo-securedapi.azurewebsites.net/Flag', {
+        //        const response = await fetch('https://localhost:5001/Flag',{
             method: 'GET',
             headers: { Authentication: 'Bearer ' + token }
            })
